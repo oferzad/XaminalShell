@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Xaminals.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+   
+    xmlns:sys="clr-namespace:System;assembly=netstandard"
+    xmlns:views="clr-namespace:Xaminals.Views"
+    x:Name="shell"
+    FlyoutBackgroundImage="photo.jpg"
+    FlyoutBackgroundImageAspect="AspectFill"
+    FlyoutHeaderBehavior="CollapseOnScroll">
+
+
+
+
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Route="animals">
+        <Tab
+            Title="Domestic"
+            Icon="paw.png"
+            Route="domestic">
+            <ShellContent
+                Title="Cats"
+                ContentTemplate="{DataTemplate views:CatsPage}"
+                Icon="cat.png"
+                Route="cats" />
+            <ShellContent
+                Title="Dogs"
+                ContentTemplate="{DataTemplate views:DogsPage}"
+                Icon="dog.png"
+                Route="dogs" />
+        </Tab>
+
+        <!--
+            Shell has implicit conversion operators that enable the Shell visual hierarchy to be simplified.
+            This is possible because a subclassed Shell object can only ever contain a FlyoutItem object or a TabBar object,
+            which can only ever contain Tab objects, which can only ever contain ShellContent objects.
+            
+            The code below demonstrates using these implicit conversion operators to simplify the visual hierarchy. Code that
+            relies on the implicit conversion operators will produce intellisense errors in the Visual Studio XAML editor. However,
+            this code is valid and does build.
+        -->
+        <ShellContent
+            Title="Monkeys"
+            ContentTemplate="{DataTemplate views:MonkeysPage}"
+            Icon="monkey.png"
+            Route="monkeys" />
+        <ShellContent
+            Title="Elephants"
+            ContentTemplate="{DataTemplate views:ElephantsPage}"
+            Icon="elephant.png"
+            Route="elephants" />
+        <ShellContent
+            Title="Bears"
+            ContentTemplate="{DataTemplate views:BearsPage}"
+            Icon="bear.png"
+            Route="bears" />
+    </FlyoutItem>
+
+
+
+    <MenuItem
+        Command="{Binding HelpCommand}"
+        CommandParameter="https://docs.microsoft.com/dotnet/maui/fundamentals/shell"
+        IconImageSource="help.png"
+        Text="Help" />
+
+</Shell>
