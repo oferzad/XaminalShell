@@ -21,7 +21,7 @@ namespace Xaminals.ViewModels
         {
             _dataSource = dataSource;
             Monkeys = new ObservableCollection<Animal>(_dataSource.GetMonkeys());
-            SelectCommand = new Command(async (x) =>
+            SelectCommand = new Command(async () =>
             {
                 var navigationParameter = new Dictionary<string, object>
             {

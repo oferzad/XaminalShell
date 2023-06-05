@@ -55,12 +55,8 @@ public static class MauiProgram
         builder.Services.AddSingleton<CatsPageViewModel>();
         builder.Services.AddSingleton<BearsPageViewModel>();
       
-
-
-
-
         //--------Transient ViewModels
-
+        builder.Services.AddTransient<MonkeyDetailPageViewModel>();
         builder.Services.AddTransient<BearDetailsPageViewModel>();
         builder.Services.AddTransient<ElephantDetailPageViewModel>();
         builder.Services.AddTransient<DogDetailPageViewModel>();

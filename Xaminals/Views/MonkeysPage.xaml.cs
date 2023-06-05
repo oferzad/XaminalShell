@@ -11,14 +11,6 @@ namespace Xaminals.Views
             BindingContext=vm;
         }
 
-        async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Animal animal = e.CurrentSelection.FirstOrDefault() as Animal;
-            var navigationParameters = new Dictionary<string, object>
-            {
-                { "Monkey", animal }
-            };
-            await Shell.Current.GoToAsync($"monkeydetails", navigationParameters);
-        }
+       
     }
 }
