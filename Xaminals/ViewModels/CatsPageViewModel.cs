@@ -23,7 +23,7 @@ namespace Xaminals.ViewModels
             _dataSource = dataSource;
             Cats = new ObservableCollection<Animal>(_dataSource.GetCats());
 
-            SelectCommand = new Command(async (x) => {
+            SelectCommand = new Command(async () => {
 
                 // The following route works because route names are unique in this application.
                 await Shell.Current.GoToAsync($"catdetails?name={SelectedCat.Name}");  }); 
