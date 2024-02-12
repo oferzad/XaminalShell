@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
-using Xaminals.Data;
+using Xaminals.Services;
 using Xaminals.Models;
 
 namespace Xaminals.ViewModels

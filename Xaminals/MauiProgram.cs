@@ -1,5 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
-using Xaminals.Data;
+using Xaminals.Services;
 using Xaminals.ViewModels;
 using Xaminals.Views;
 

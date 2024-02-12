@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xaminals.Models;
 
-namespace Xaminals.Data
+namespace Xaminals.Services
 {
     public class DataSource
     {

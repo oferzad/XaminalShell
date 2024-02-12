@@ -32,6 +32,12 @@
                 Route="dogs" />
         </Tab>
 
+        <Tab Title="Monekys" Icon="monkey.png" Route="Monkeys">
+            <ShellContent 
+            ContentTemplate="{DataTemplate views:MonkeysPage}"
+            />
+        </Tab>
+        
         <!--
             Shell has implicit conversion operators that enable the Shell visual hierarchy to be simplified.
             This is possible because a subclassed Shell object can only ever contain a FlyoutItem object or a TabBar object,
@@ -41,11 +47,7 @@
             relies on the implicit conversion operators will produce intellisense errors in the Visual Studio XAML editor. However,
             this code is valid and does build.
         -->
-        <ShellContent
-            Title="Monkeys"
-            ContentTemplate="{DataTemplate views:MonkeysPage}"
-            Icon="monkey.png"
-            Route="monkeys" />
+        
         <ShellContent
             Title="Elephants"
             ContentTemplate="{DataTemplate views:ElephantsPage}"
